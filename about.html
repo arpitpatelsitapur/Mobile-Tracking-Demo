@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Mobile Tracking Forensics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --dark-brown: #5D4037;
+            --medium-brown: #795548;
+            --light-brown: #BCAAA4;
+            --cream: #F5F5F5;
+        }
+        body {
+            background-color: var(--cream);
+            color: var(--dark-brown);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            background-color: var(--dark-brown) !important;
+        }
+        .method-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--medium-brown);
+        }
+        .method-card h4 {
+            color: var(--dark-brown);
+            border-bottom: 2px solid var(--light-brown);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .method-card ul li {
+            color: var(--medium-brown);
+            margin-bottom: 8px;
+        }
+        .method-card ul li:before {
+            content: "✓";
+            margin-right: 8px;
+            color: var(--dark-brown);
+        }
+        .side-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-top: 5px solid var(--medium-brown);
+        }
+        .side-card h5 {
+            color: var(--dark-brown);
+            margin-bottom: 15px;
+        }
+        .lead {
+            color: var(--medium-brown);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Mobile Tracking Forensics</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="demo.html">Interactive Demo</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h2 class="mb-4">About Mobile Device Tracking</h2>
+        
+        <div class="row">
+            <div class="col-lg-8">
+                <p class="lead">Understanding how mobile devices leave digital traces and how law enforcement can use these traces for investigations.</p>
+
+                <div class="method-card card p-4">
+                    <h4>1. Tower Dump Analysis</h4>
+                    <p>Every mobile tower logs data about all connected devices during a time window. Investigators can:</p>
+                    <ul>
+                        <li>Pull a "tower dump" — list of all mobile numbers and device IDs</li>
+                        <li>Filter for anomalies like long duration calls</li>
+                        <li>Track messaging app usage patterns</li>
+                        <li>Identify devices visiting multiple towers in short spans</li>
+                    </ul>
+                </div>
+
+                <div class="method-card card p-4">
+                    <h4>2. IMEI-SIM Correlation</h4>
+                    <p>Device hardware IDs (IMEI) are tracked against SIM card changes:</p>
+                    <ul>
+                        <li>Track which SIMs were used with a single IMEI</li>
+                        <li>Monitor when and where those SIMs were active</li>
+                        <li>Identify potential burner phones or suspicious device reuse</li>
+                    </ul>
+                </div>
+
+                <div class="method-card card p-4">
+                    <h4>3. Wi-Fi MAC Tracing</h4>
+                    <p>MAC addresses provide another layer of device tracking:</p>
+                    <ul>
+                        <li>Track device MAC addresses across different WiFi networks</li>
+                        <li>Match MAC addresses from tower logs to WiFi login records</li>
+                        <li>Connect anonymous devices to registered user accounts</li>
+                    </ul>
+                </div>
+
+                <div class="method-card card p-4">
+                    <h4>4. Cloud/App Forensics</h4>
+                    <p>Digital evidence from cloud services and apps:</p>
+                    <ul>
+                        <li>Analyze metadata from cloud providers</li>
+                        <li>Track file upload patterns and timestamps</li>
+                        <li>Identify behavioral patterns even with encrypted content</li>
+                    </ul>
+                </div>
+
+                <div class="method-card card p-4">
+                    <h4>5. Link Analysis</h4>
+                    <p>Connecting all the digital evidence:</p>
+                    <ul>
+                        <li>Map relationships between SIM, IMEI, MAC, Email, and Location</li>
+                        <li>Visualize communication patterns and clusters</li>
+                        <li>Identify key players and suspicious behavior patterns</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Educational Purpose</h5>
+                        <p class="card-text">This demonstration is designed to educate about digital forensics and raise awareness about digital privacy. Understanding these techniques helps in:</p>
+                        <ul>
+                            <li>Privacy awareness</li>
+                            <li>Digital security</li>
+                            <li>Forensic investigation understanding</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Privacy Notice</h5>
+                        <p class="card-text">This is a simulated demonstration using mock data. No real device tracking or data collection is performed.</p>
+                    </div>
+                </div>
+
+                <!-- Developer Contact Card -->
+                <div class="card mt-4 developer-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Developer Contact</h5>
+                        <div class="developer-info">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-user me-2" style="color: var(--medium-brown);"></i>
+                                <span>Arpit Patel</span>
+                            </div>
+                            <div class="social-links">
+                                <a href="https://github.com/arpitpatelsitapur" target="_blank" class="btn btn-outline-secondary mb-2 w-100">
+                                    <i class="fab fa-github me-2"></i> GitHub
+                                </a>
+                                <a href="https://www.linkedin.com/in/arpit-patel-b17416229/" target="_blank" class="btn btn-outline-secondary mb-2 w-100">
+                                    <i class="fab fa-linkedin me-2"></i> LinkedIn
+                                </a>
+                                <a href="mailto:arpitpatel.it2025@gmail.com" class="btn btn-outline-secondary w-100">
+                                    <i class="fas fa-envelope me-2"></i> Email
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Additional CSS for developer card -->
+    <style>
+        .developer-card {
+            border-top: 5px solid var(--medium-brown);
+            transition: transform 0.3s ease;
+        }
+        .developer-card:hover {
+            transform: translateY(-5px);
+        }
+        .social-links .btn {
+            transition: all 0.3s ease;
+            border-color: var(--light-brown);
+            color: var(--dark-brown);
+        }
+        .social-links .btn:hover {
+            background-color: var(--medium-brown);
+            border-color: var(--medium-brown);
+            color: white;
+        }
+        .developer-info {
+            color: var(--medium-brown);
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

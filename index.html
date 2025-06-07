@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Device Tracking Visualization</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --dark-brown: #5D4037;
+            --medium-brown: #795548;
+            --light-brown: #BCAAA4;
+            --cream: #F5F5F5;
+        }
+        body {
+            background-color: var(--cream);
+            color: var(--dark-brown);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            background-color: var(--dark-brown) !important;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(93, 64, 55, 0.9), rgba(93, 64, 55, 0.7)), url('https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?ixlib=rb-4.0.0');
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 50px;
+        }
+        .content-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--medium-brown);
+        }
+        .feature-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            border: none;
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .feature-card .card-title {
+            color: var(--dark-brown);
+            border-bottom: 2px solid var(--light-brown);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .btn-primary {
+            background-color: var(--medium-brown);
+            border-color: var(--dark-brown);
+        }
+        .btn-primary:hover {
+            background-color: var(--dark-brown);
+            border-color: var(--dark-brown);
+        }
+        .list-unstyled li {
+            color: var(--medium-brown);
+            margin-bottom: 8px;
+        }
+        .list-unstyled li:before {
+            content: "✓";
+            margin-right: 8px;
+            color: var(--dark-brown);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Mobile Tracking Forensics</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="demo.html">Interactive Demo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <div class="content-card" style="background-color: rgba(255, 255, 255, 0.9);">
+                <h1 class="display-4" style="color: var(--dark-brown);">How Police Track Mobile Communications</h1>
+                <p class="lead" style="color: var(--medium-brown);">A Forensic Intelligence Walkthrough</p>
+                <a href="demo.html" class="btn btn-primary btn-lg mt-3">Try Interactive Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row g-4">
+            <!-- Tower Dump Analysis -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h5 class="card-title">Tower Dump Analysis</h5>
+                    <p class="card-text">Discover how investigators analyze mobile tower data to track device movements and identify suspicious patterns.</p>
+                    <ul class="list-unstyled">
+                        <li>Tower connection logs</li>
+                        <li>Time-based filtering</li>
+                        <li>Anomaly detection</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- IMEI-SIM Correlation -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h5 class="card-title">IMEI-SIM Correlation</h5>
+                    <p class="card-text">Learn how police track devices through hardware IDs and SIM card changes to identify suspicious behavior.</p>
+                    <ul class="list-unstyled">
+                        <li>Hardware tracking</li>
+                        <li>SIM change detection</li>
+                        <li>Pattern analysis</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- WiFi MAC Tracing -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h5 class="card-title">WiFi MAC Tracing</h5>
+                    <p class="card-text">Explore how MAC addresses from WiFi connections can be used to track device movement patterns.</p>
+                    <ul class="list-unstyled">
+                        <li>MAC address tracking</li>
+                        <li>Network correlation</li>
+                        <li>Location mapping</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Study Section -->
+    <section class="container my-5">
+        <div class="content-card case-study">
+            <h2 class="mb-4">🔥 Case Study: "The Vanishing Laptop(with dummy data)"</h2>
+            
+            <div class="scenario-box mb-4">
+                <h5>📋 The Scenario</h5>
+                <p>High-end laptop stolen from GGV's computer lab at 11:23 AM, June 6th. CCTV tampered. No fingerprints. Only lead: suspicious person with phone spotted outside.</p>
+            </div>
+
+            <div class="investigation-steps">
+                <div class="step-box mb-4">
+                    <h5>🔍 Step 1: Tower Dump Analysis</h5>
+                    <p class="mb-2">Time Window: 11:20 AM – 11:30 AM</p>
+                    <p class="mb-2">Location: Lab Tower (CG-BLP-022)</p>
+                    <div class="suspect-highlight p-3 mb-3" style="background-color: var(--cream); border-radius: 10px;">
+                        <strong>Key Suspect:</strong> Number 9977889900
+                        <ul class="mb-0">
+                            <li>IMEI: 3541111222333</li>
+                            <li>Duration: 8 minutes (Longest connection)</li>
+                            <li>App: Telegram</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-box mb-4">
+                    <h5>📱 Step 2: Call Record Analysis</h5>
+                    <p class="text-danger">Critical: Call made at 11:26 AM - exact time of theft</p>
+                    <ul>
+                        <li>Location matches crime scene</li>
+                        <li>Pattern: Repeated calls to same numbers</li>
+                    </ul>
+                </div>
+
+                <div class="step-box mb-4">
+                    <h5>🔢 Step 3: IMEI Investigation</h5>
+                    <ul>
+                        <li>Multiple SIM switches detected</li>
+                        <li>Suspicious pattern: 3 SIM changes in 4 days</li>
+                    </ul>
+                </div>
+
+                <div class="step-box mb-4">
+                    <h5>📍 Step 4: Location Tracking</h5>
+                    <div class="timeline p-3" style="background-color: var(--cream); border-radius: 10px;">
+                        <p class="mb-1">11:26 AM - Lab Tower</p>
+                        <p class="mb-1">11:45 AM - Main Gate</p>
+                        <p class="mb-1">12:05 PM - Shastri Nagar</p>
+                        <p class="mb-0 text-danger">→ Clear escape route identified</p>
+                    </div>
+                </div>
+
+                <div class="step-box mb-4">
+                    <h5>⚡ Breakthrough</h5>
+                    <ul>
+                        <li>Fake ID used for SIM registration</li>
+                        <li>IMEI linked to Jio account: ravisharma123@</li>
+                        <li>IP traced to GGV Wi-Fi</li>
+                        <li>MAC address matched campus records</li>
+                    </ul>
+                </div>
+
+                <div class="conclusion p-4 mt-4" style="background-color: var(--cream); border-radius: 15px;">
+                    <h5>🎯 Case Solved Using:</h5>
+                    <div class="row">
+                        <div class="col-md-4"><span class="badge bg-secondary">Tower Dumps</span></div>
+                        <div class="col-md-4"><span class="badge bg-secondary">CDR Analysis</span></div>
+                        <div class="col-md-4"><span class="badge bg-secondary">IMEI Tracking</span></div>
+                        <div class="col-md-4"><span class="badge bg-secondary">Pattern Matching</span></div>
+                        <div class="col-md-4"><span class="badge bg-secondary">Wi-Fi Logs</span></div>
+                        <div class="col-md-4"><span class="badge bg-secondary">MAC Tracing</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add some custom styles in the head section -->
+    <style>
+        .case-study {
+            border-left: 5px solid #FF6B6B;
+        }
+        .step-box {
+            border-left: 3px solid var(--medium-brown);
+            padding-left: 20px;
+        }
+        .badge {
+            margin: 5px;
+            padding: 8px 15px;
+            font-size: 0.9rem;
+            background-color: var(--medium-brown) !important;
+        }
+        .timeline {
+            border-left: 3px solid var(--dark-brown);
+            padding-left: 15px;
+        }
+        .suspect-highlight {
+            border-left: 3px solid #FF6B6B;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
